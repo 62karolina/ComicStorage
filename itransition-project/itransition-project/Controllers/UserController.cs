@@ -23,6 +23,7 @@ namespace itransition_project.Controllers
         [HttpGet]
         public ActionResult UserInfo(string id)
         {
+
             ApplicationDbContext db = new ApplicationDbContext();
             
             if (db.Users.Any(o => o.UserName == id))

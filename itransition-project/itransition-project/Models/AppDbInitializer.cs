@@ -26,14 +26,13 @@ namespace itransition_project.Models
             roleManager.Create(role2);
 
             // создаем пользователей
-            var admin = new ApplicationUser { Email = "somemail@mail.ru", UserName = "somemail@mail.ru" };
-            string password = "ad46D_ewr3";
+            var admin = new ApplicationUser { Email = "admin@mail.ru", UserName = "admin@mail.ru" };
+            string password = "admin1234";
 
-            var admin1 = new ApplicationUser { Email = "admin@mail.ru", UserName = "admin@mail.ru" };
-            string password1 = "admin1234";
+           
 
             var result = userManager.Create(admin, password);
-            var result1 = userManager.Create(admin1, password1);
+          
 
             // если создание пользователя прошло успешно
             if (result.Succeeded)
@@ -45,12 +44,7 @@ namespace itransition_project.Models
 
             }
 
-            if (result1.Succeeded)
-            {
-                // добавляем для пользователя роль
-                userManager.AddToRole(admin1.Id, role1.Name);
-            }
-
+     
             base.Seed(context);
         }
     }
