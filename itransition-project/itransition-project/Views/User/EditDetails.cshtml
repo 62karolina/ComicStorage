@@ -1,0 +1,24 @@
+﻿@model itransition_project.Models.Profile
+
+@{
+    ViewBag.Title = "EditDetails";
+}
+
+<h2>EditDetails</h2>
+
+
+@using (Html.BeginForm("EditDetails", "User", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.About, "About")
+            <br />
+            @Html.EditorFor(m => m.About)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
