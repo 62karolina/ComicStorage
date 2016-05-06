@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<itransition_project.Models.ApplicationUser>
 @{
     
 }
@@ -11,7 +11,29 @@
     <title>Administration</title>
 </head>
 <body>
-    <div> 
+    <div class="tabbable">
+        <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Вкладка 1</a></li>
+            <li><a href="#tab2" data-toggle="tab">Вкладка 2</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                @foreach(itransition_project.Models.ApplicationUser item in Model)
+                {
+                    
+                    <table class="table">
+                        @item.UserName
+                        
+                    </table>
+                            
+                        
+                 }
+</div>
+            <div class="tab-pane" id="tab2">
+                <p>Привет, я 2-я секция.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

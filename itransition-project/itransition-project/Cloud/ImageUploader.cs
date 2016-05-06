@@ -14,9 +14,9 @@ namespace itransition_project.Cloud
         public ImageUploader()
         {
             var account = new Account(
-            "da40pd4iw",
-            "878111261769614",
-            "d_UzO32EJIqhtFnshPcdgalOFeg");
+            "dee0sun8y",
+            "544389232321383",
+            "9YtSd3LzeVZZ3IXs_i0bA00mvwg");
 
             _cloudinary = new CloudinaryDotNet.Cloudinary(account);
         }
